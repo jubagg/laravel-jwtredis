@@ -1,5 +1,5 @@
 {
-    "name": "sametsahindogan/laravel-jwtredis",
+    "name": "jubagg/laravel-jwtredis",
     "description": "This package allows JWT-authenticated users to be stored and management in Redis with their roles, permissions, statuses and anything you want.",
     "keywords": [
         "laravel",
