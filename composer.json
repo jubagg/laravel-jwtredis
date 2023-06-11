@@ -15,8 +15,7 @@
     "require": {
         "php": ">=7.2.5",
         "php-open-source-saver/jwt-auth": "^2.1.0",
-        "spatie/laravel-permission": "^5.0",
-        "sametsahindogan/response-object-creator": "1.0.2"
+        "spatie/laravel-permission": "^5.0"
     },
     "license": "MIT",
     "authors": [

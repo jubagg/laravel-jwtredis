@@ -6,7 +6,6 @@ use Closure;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Sametsahindogan\ResponseObjectCreator\SuccessResult;
 use PHPOpenSourceSaver\JWTAuth\Exceptions\JWTException;
 use PHPOpenSourceSaver\JWTAuth\Exceptions\TokenInvalidException;
 use PHPOpenSourceSaver\JWTAuth\JWTAuth;
@@ -86,6 +85,6 @@ class Refreshable extends BaseMiddleware
     {
         $token = $token ?: $this->auth->refresh();
 
-        return response()->json(new SuccessResult(['token' => $token]));
+        return response()->json(['token' => $token]);
     }
 }

@@ -4,8 +4,6 @@ namespace Sametsahindogan\JWTRedis\Http\Middleware;
 
 use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Auth;
-use Sametsahindogan\ResponseObjectCreator\ErrorResult;
-use Sametsahindogan\ResponseObjectCreator\ErrorService\ErrorBuilder;
 use PHPOpenSourceSaver\JWTAuth\Facades\JWTAuth;
 use PHPOpenSourceSaver\JWTAuth\Token;
 
@@ -53,13 +51,10 @@ abstract class BaseMiddleware
     {
         $error = config('jwtredis.errors.'.class_basename($exception)) ?? config('jwtredis.errors.default');
 
-        return response()->json(
-            new ErrorResult(
-                (new ErrorBuilder())
-                    ->title($error['title'])
-                    ->message($error['message'])
-                    ->code($error['code'])
-            )
-        );
+        return response()->json([
+                $error['title'],
+                $error['message'],
+                $error['code'],   
+        ]);
     }
 }
