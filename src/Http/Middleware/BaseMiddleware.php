@@ -6,8 +6,8 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Support\Facades\Auth;
 use Sametsahindogan\ResponseObjectCreator\ErrorResult;
 use Sametsahindogan\ResponseObjectCreator\ErrorService\ErrorBuilder;
-use Tymon\JWTAuth\Facades\JWTAuth;
-use Tymon\JWTAuth\Token;
+use PHPOpenSourceSaver\JWTAuth\Facades\JWTAuth;
+use PHPOpenSourceSaver\JWTAuth\Token;
 
 abstract class BaseMiddleware
 {

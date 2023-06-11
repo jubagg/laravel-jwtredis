@@ -5,8 +5,8 @@ namespace Sametsahindogan\JWTRedis\Guards;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Contracts\Auth\Guard;
 use Sametsahindogan\JWTRedis\Facades\RedisCache;
-use Tymon\JWTAuth\Facades\JWTAuth;
-use Tymon\JWTAuth\JWTGuard;
+use PHPOpenSourceSaver\JWTAuth\Facades\JWTAuth;
+use PHPOpenSourceSaver\JWTAuth\JWTGuard;
 
 class JWTRedisGuard extends JWTGuard implements Guard
 {
